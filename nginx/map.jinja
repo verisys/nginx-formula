@@ -1,6 +1,8 @@
 {% set nginx = salt['grains.filter_by']({
     'Debian': {
         'apache_utils': 'apache2-utils',
+        'install_from_ppa': True,
+        'package': 'nginx',
     },
     'RedHat': {
         'apache_utils': 'httpd-tools',
